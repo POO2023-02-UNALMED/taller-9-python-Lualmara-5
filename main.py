@@ -1,6 +1,7 @@
 from tkinter import Tk, Button, Entry, StringVar
 
 # Configuración ventana principal
+
 root = Tk()
 root.title("Calculadora POO")
 root.resizable(0,0)
@@ -8,11 +9,25 @@ root.geometry()
 num = ""
 val = StringVar()
 
+#Operaciones
+
+def entradas(x):
+  global num
+  num = num + str(x)
+  val.set(num)
+
+def operar():
+  global num
+  result = str(eval(num))
+  val.set(result)
+
 # Configuración pantalla de salida 
+
 pantalla = Entry(root, width=40, bg="black", fg="white", borderwidth=0, font=("arial", 18, "bold"))
 pantalla.grid(row=0, column=0, columnspan=***, padx=1, pady=***)
 
 # Configuración botones
+
 boton_1 = Button(root, text="1", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=1, column=***, padx=1, pady=***)
 boton_2 = Button(root, text="2", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=***, column=***, padx=***, pady=1)
 boton_3 = Button(root, text="3", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=1, column=***, padx=***, pady=1)

@@ -1,10 +1,12 @@
-from tkinter import Tk, Button, Entry
+from tkinter import Tk, Button, Entry, StringVar
 
 # Configuración ventana principal
 root = Tk()
-root.title(***)
+root.title("Calculadora POO")
 root.resizable(0,0)
-root.geometry(***)
+root.geometry()
+num = ""
+val = StringVar()
 
 # Configuración pantalla de salida 
 pantalla = Entry(root, width=40, bg="black", fg="white", borderwidth=0, font=("arial", 18, "bold"))
